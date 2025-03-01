@@ -1,0 +1,8 @@
+Create a Golang program that implements a simple HTTP web server. The server should:
+
+1. Handle GET requests to the root path ("/") and respond with a welcome message.
+2. Serve static files from a "static" directory for any requests to paths that match files in that directory.
+3. Include proper logging of incoming requests and any errors that occur.
+4. Gracefully handle invalid routes by returning a 404 Not Found response with a custom message.
+5. Support configurable server settings, such as the port number, through command-line flags.
+6. Ensure the server is concurrent and can handle multiple requests simultaneously using goroutines.
