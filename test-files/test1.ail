@@ -1,1 +1,8 @@
+Create a Golang program that efficiently finds all prime numbers up to a given limit using the segmented sieve algorithm. The program should:
 
+Use concurrency to divide the workload efficiently across multiple goroutines.
+Minimize memory usage by processing segments instead of storing the entire sieve.
+Output the primes in ascending order with a clean, readable format.
+Include proper error handling and graceful handling of invalid inputs.
+Optimize for large inputs (e.g., up to 10^9) to ensure performance.
+Avoid using any third-party libraries; implement everything using standard Go packages only.
