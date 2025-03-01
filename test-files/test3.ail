@@ -1,0 +1,8 @@
+Create a Golang program that implements a command-line calculator. The calculator should:
+
+1. Support basic arithmetic operations: addition, subtraction, multiplication, and division.
+2. Accept input in the form of a mathematical expression (e.g., "3 + 4 * 2").
+3. Handle operator precedence and parentheses correctly.
+4. Include error handling for invalid expressions and division by zero.
+5. Allow users to perform multiple calculations in a single session until they choose to exit.
+6. Provide a clean and user-friendly interface with clear prompts and output.
