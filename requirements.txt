@@ -1,0 +1,7 @@
+termcolor
+pathlib
+subprocess
+json
+requests
+time
+os
