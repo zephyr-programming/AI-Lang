@@ -1,6 +1,6 @@
 # AI Lang - The future of programming languages
 
-![AIL Logo](logo.png)
+![AIL Logo](logo.PNG)
 
 This project is a programming designed to integrate AI into a programming language & translate natural language descriptions into functional Go code. It leverages the HuggingFace API to convert English text into Go source code, streamlining the development process. The tool supports custom HuggingFace models, saves generated code, and provides build and run capabilities.
 
