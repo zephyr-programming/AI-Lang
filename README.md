@@ -27,15 +27,9 @@ This project is a programming designed to integrate AI into a programming langua
 
 ### Using the Python file
 
-*   Clone the repository using the command:
-    ```bash
-    git clone https://github.com/zephyr-programming/AI-Lang.git
-    ```
+*   Clone the repository using the command: `git clone https://github.com/zephyr-programming/AI-Lang.git`
 *   Enter the directory in which the repository has been cloned.
-*   Install the required python libraries using the command:
-    ```bash
-    pip install -r requirements.txt
-    ```
+*   Install the required python libraries using the command: `pip install -r requirements.txt`
 
 ## Usage
 
