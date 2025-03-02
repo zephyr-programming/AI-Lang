@@ -18,12 +18,7 @@ This project provides a command-line tool that interprets English text and conve
 
 ## Installation
 
-1.  Clone the repository (if applicable).
-2.  Install the required Python packages:
-
-    ```bash
-    pip install requests termcolor
-    ```
+### AIL
 
 ## Usage
 
