@@ -27,6 +27,12 @@ This project provides a command-line tool that interprets English text and conve
 
 ### Using the Python file
 
+*   Clone the repository using the command:
+    ```bash
+    git clone https://github.com/zephyr-programming/AI-Lang.git
+    ```
+*   
+
 ## Usage
 
 1.  Run the `main.py` script:
