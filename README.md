@@ -12,7 +12,7 @@ This project is a programming designed to integrate AI into a programming langua
 
 ## Prerequisites
 
-*   Python 3.x
+*   Python 3.x (Only if you are using the application via the Python script)
 *   Hugging Face API key (obtainable from [https://huggingface.co/](https://huggingface.co/))
 *   Go (for building and running the generated code)
 
