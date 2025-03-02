@@ -42,22 +42,17 @@ No learning is required and thus makes AIL a plain english programming language.
 
 ## Usage
 
-1.  Run the `main.py` script:
-
-    ```bash
-    python main.py
-    ```
-
-2.  Enter your Hugging Face API key when prompted (or use the `config` command).
-3.  Use the `make <file.ail>` command to process a `.ail` file.  For example:
+*  Run the `main.py` script or type `ail` in your terminal with respect to your installation method.
+*  Enter your HuggingFace API key when prompted.
+*  Use the `make <file.ail>` command to process a `.ail` file.  For example:
 
     ```
-    make AIL-Files/test.ail
+    make your-file.ail
     ```
 
-4.  Enter a project name when prompted.
-5.  The program will convert the English text in the `.ail` file to Golang code, save it to a `.go` file, and attempt to build it.
-6.  If the build is successful, you will be prompted to run the program.
+*  Enter a project name when prompted.
+*  The program will convert the English text in the `.ail` file to Golang code, save it to a `.go` file, and attempt to build it.
+*  If the build is successful, you will be prompted to run the program.
 
 ## Commands
 
@@ -67,12 +62,6 @@ No learning is required and thus makes AIL a plain english programming language.
 *   `help`: Displays the help menu.
 *   `exit`: Exits the program.
 
-## Example .ail file (AIL-Files/test.ail)
-
-```
-Write a simple "Hello, World!" program in Go.
-```
-
 ## License
 
-[Insert License Here - e.g., MIT, Apache 2.0]
+This project is licensed under the Creative Commons Zero v1.0 Universal license. You may view the license at [this link.](https://github.com/zephyr-programming/AI-Lang/blob/main/LICENSE).
