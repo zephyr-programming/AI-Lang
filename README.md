@@ -18,7 +18,14 @@ This project provides a command-line tool that interprets English text and conve
 
 ## Installation
 
-### AIL
+### Using the installer
+
+*   Go to the [Latest Release](https://github.com/zephyr-programming/AI-Lang/releases/tag/Installer) and install the file 'AILInstaller.exe'.
+*   Open the downloaded installer program.
+*   Install the program by following the steps in the installer.
+*   Restart your computer, in order to effectively use resources added the PATH by the installer.
+
+### Using the Python file
 
 ## Usage
 
