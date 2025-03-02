@@ -35,12 +35,7 @@ This project is a programming designed to integrate AI into a programming langua
 
 *  Run the `main.py` script or type `ail` in your terminal with respect to your installation method.
 *  Enter your HuggingFace API key when prompted.
-*  Use the `make <file.ail>` command to process a `.ail` file.  For example:
-
-    ```
-    make your-file.ail
-    ```
-
+*  Use the `make <file.ail>` command to process a `.ail` file.  For example: `make your-file.ail`
 *  Enter a project name when prompted.
 *  The program will convert the English text in the `.ail` file to Golang code, save it to a `.go` file, and attempt to build it.
 *  If the build is successful, you will be prompted to run the program.
