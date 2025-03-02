@@ -17,7 +17,7 @@ from termcolor import colored
 CONFIG_FILE = "ailconfig.json"
 ```
 
-**Configuration:** Defines the name of the configuration file where the Hugging Face API key is stored.
+**Configuration:** Defines the name of the configuration file where the HuggingFace API key is stored.
 
 ```python
 class AILanguageInterpreter:
