@@ -1,9 +1,6 @@
 # AI Lang - The future of programming languages
 
-AI Lang or AIL, is the future of programming languages.<br>
-It functions by integrating programming and AI together.<br>
-This makes it easy for anyone to do programming.<br>
-No learning is required and thus makes AIL a plain english programming language.
+This project is a command-line tool designed to translate natural language descriptions into functional Go code. It leverages the Hugging Face API to convert English text into Go source code, streamlining the development process. The tool supports custom Hugging Face models, saves generated code, and provides build and run capabilities.
 
 ## Features
 
