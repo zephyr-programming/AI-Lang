@@ -31,7 +31,11 @@ This project provides a command-line tool that interprets English text and conve
     ```bash
     git clone https://github.com/zephyr-programming/AI-Lang.git
     ```
-*   
+*   Enter the directory in which the repository has been cloned.
+*   Install the required python libraries using the command:
+    ```bash
+    pip install -r requirements.txt
+    ```
 
 ## Usage
 
