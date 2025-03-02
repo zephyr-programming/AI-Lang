@@ -64,4 +64,4 @@ No learning is required and thus makes AIL a plain english programming language.
 
 ## License
 
-This project is licensed under the Creative Commons Zero v1.0 Universal license. You may view the license at [this link.](https://github.com/zephyr-programming/AI-Lang/blob/main/LICENSE).
+This project is licensed under the Creative Commons Zero v1.0 Universal license. You may view the license at [this link.](https://github.com/zephyr-programming/AI-Lang/blob/main/LICENSE)
