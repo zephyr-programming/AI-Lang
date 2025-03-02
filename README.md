@@ -1,4 +1,4 @@
-# AI Language Interpreter
+# AI Lang - The future of programming languages
 
 This project provides a command-line tool that interprets English text and converts it into Golang code using the Hugging Face API.
 
