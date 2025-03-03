@@ -16,15 +16,15 @@ This project is a programming designed to integrate AI into a programming langua
 
 ## Prerequisites
 
-*   Python 3.x (Only if you are using the application via the Python script)
-*   Hugging Face API key (obtainable from [https://huggingface.co/](https://huggingface.co/))
-*   Go (for building and running the generated code)
+*   Python 3.x (Only if you are using the application via the Python script).
+*   Hugging Face API key (obtainable from [here](https://huggingface.co/settings/tokens)).
+*   Go (for building and running the generated code).
 
 ## Installation
 
 ### Using the installer
 
-*   Go to the [Latest Release](https://github.com/zephyr-programming/AI-Lang/releases/tag/Installer) and install the file 'AILInstaller.exe'.
+*   Go to the [Latest Release](https://github.com/zephyr-programming/AI-Lang/releases/latest) and install the file 'AILInstaller.exe'.
 *   Open the downloaded installer program.
 *   Install the program by following the steps in the installer.
 *   Restart your computer, in order to effectively use resources added the PATH by the installer.
