@@ -89,6 +89,64 @@ Generate only the Golang code without any explanations. The code should be compl
             print(error_msg)
             raise Exception(error_msg)
 
+    def debug_golang_code(self, golang_file, error_message):
+        """
+        Send the error message and file contents to the AI for debugging
+        and update the file with the fixed code.
+        """
+        print(colored("\nSending code to AI for debugging...", "yellow"))
+        
+        with open(golang_file, "r") as f:
+            file_content = f.read()
+            
+        prompt = f"""You are an expert Golang developer. Debug and fix the following Go code that has compilation errors.
+
+ERROR MESSAGE:
+{error_message}
+
+CURRENT CODE:
+{file_content}
+
+Please provide ONLY the complete fixed code without any explanations or markdown formatting. The code should be ready to compile:"""
+
+        payload = {
+            "inputs": prompt,
+            "parameters": {
+                "max_new_tokens": 2048,
+                "temperature": 0.7,
+                "top_p": 0.95,
+                "return_full_text": False
+            }
+        }
+        
+        response = requests.post(self.api_url, headers=self.headers, json=payload)
+        
+        if response.status_code != 200:
+            error_msg = colored(f"Failed to debug Golang code: {response.text}", "red")
+            print(error_msg)
+            raise Exception(error_msg)
+            
+        try:
+            result = response.json()
+            if isinstance(result, list) and len(result) > 0:
+                fixed_code = result[0]["generated_text"]
+
+                fixed_code = fixed_code.replace("```go", "").replace("```golang", "").replace("```", "").strip()
+                
+                with open(golang_file, "w") as f:
+                    f.write(fixed_code)
+                
+                print(colored(f"Fixed code saved to {golang_file}", "green"))
+                return True
+            else:
+                error_msg = colored(f"Unexpected response format: {result}", "red")
+                print(error_msg)
+                raise Exception(error_msg)
+        except Exception as e:
+            error_msg = colored(f"Error processing response: {str(e)}\nResponse: {response.text}", "red")
+            print(error_msg)
+            raise Exception(error_msg)
+
     def build_program(self, golang_file):
         print("\nBuilding your program...")
         estimated_time = os.path.getsize(golang_file) / 1000
@@ -120,13 +178,37 @@ Generate only the Golang code without any explanations. The code should be compl
             if result.returncode != 0:
                 print(colored("Build failed!", "red"))
                 print(colored(result.stderr, "red"))
+                
+                debug_choice = input("\nWould you like to debug and fix the errors? (y/n): ").strip().lower()
+                
+                if debug_choice == 'y':
+                    debug_success = self.debug_golang_code(golang_file, result.stderr)
+                    
+                    if debug_success:
+                        print(colored("\nAttempting to build with fixed code...", "yellow"))
+                        result = subprocess.run(["go", "build", golang_file], capture_output=True, text=True)
+                        
+                        if result.returncode != 0:
+                            print(colored("Build still failed after debugging attempt.", "red"))
+                            print(colored(result.stderr, "red"))
+                        else:
+                            exe_file = f"{golang_file.removesuffix('.go')}.exe" if os.name == 'nt' else file_name
+                            print(colored(f"\nSuccess! Fixed the code and built your program at '{exe_file}'.", "green"))
+                            
+                            run_program = input("Do you want to run the program? (y/n): ").strip().lower()
+                            if run_program == 'y':
+                                subprocess.run([f"./{exe_file}" if os.name != 'nt' else exe_file])
+                            else:
+                                print("Program not run.")
+                else:
+                    print("Debugging skipped.")
             else:
-                exe_file = f"{golang_file.removesuffix('.go')}.exe"
-                print(f"Successfully built your program at '{exe_file}'.\n")
+                exe_file = f"{golang_file.removesuffix('.go')}.exe" if os.name == 'nt' else file_name
+                print(colored(f"Successfully built your program at '{exe_file}'.\n", "green"))
                 
                 run_program = input("Do you want to run the program? (y/n): ").strip().lower()
                 if run_program == 'y':
-                    subprocess.run([exe_file])
+                    subprocess.run([f"./{exe_file}" if os.name != 'nt' else exe_file])
                 else:
                     print("Program not run.")
 
@@ -144,7 +226,7 @@ def main():
     
     while True:
         try:
-            command = input(f"The AI Lang Interpreter 0.0.1 at {cwd} -> \n").strip()
+            command = input(f"The AI Lang Interpreter 0.0.2 at {cwd} -> \n").strip()
             
             if command.lower() == 'exit':
                 break
