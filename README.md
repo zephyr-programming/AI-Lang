@@ -1,4 +1,4 @@
-<h1 align="center">AI Lang - The future of programming languages</h1>h1
+<h1 align="center">AI Lang - The future of programming languages</h1>
 
 <p align="center">
   <img src="logo.PNG"/>
