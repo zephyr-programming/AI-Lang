@@ -58,4 +58,4 @@ The code for the project has been documented and explained in the file [document
 
 ## License
 
-This project is licensed under the Creative Commons Zero v1.0 Universal license. You may view the license at [this link.](https://github.com/zephyr-programming/AI-Lang/blob/main/LICENSE)
+This project is licensed under the Creative Commons Zero v1.0 Universal license. You may view the license [here.](https://github.com/zephyr-programming/AI-Lang/blob/main/LICENSE)
