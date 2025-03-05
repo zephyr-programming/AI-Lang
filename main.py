@@ -1,3 +1,5 @@
+# © 2025 Samarvir Singh Vasale
+
 import os
 import time
 import requests
