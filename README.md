@@ -4,20 +4,19 @@
   <img src="logo.PNG"/>
 </p>
 
-This project is a programming designed to integrate AI into a programming language & translate natural language descriptions into functional Go code. It leverages the HuggingFace API to convert English text into Go source code, streamlining the development process. The tool supports custom HuggingFace models, saves generated code, and provides build and run capabilities.
+This project is a programming language designed to integrate AI into a programming language & translate natural language descriptions/roadmaps into functional Go code. It leverages the HuggingFace & OpenRouter API to convert English text into Go source code, streamlining the development process. The tool supports custom HuggingFace models, saves generated code, and provides build and run capabilities.
 
 ## Features
 
-*   Converts English descriptions to Golang code.
-*   Saves generated Golang code to `.go` files.
-*   Builds and optionally runs the generated Golang code.
-*   Allows the user to specify a custom Hugging Face model.
-*   Saves and loads the Hugging Face API key from a configuration file.
+*   Converts english descriptions/roadmaps into Golang code.
+*   Saves generated Golang code to `.go` files and also converts the same into a `.exe` file.
+*   Generates GoLang code on the roadmap in the file used & converts it to an executable.
+*   The user can use any model on HuggingFace or OpenRouter.
 
 ## Prerequisites
 
 *   Python 3.x (Only if you are using the application via the Python script).
-*   Hugging Face API key (obtainable from [here](https://huggingface.co/settings/tokens)).
+*   HuggingFace/OpenRouter API key (depending on the provider you use) (obtainable from [here](https://huggingface.co/settings/tokens)).
 *   Go (for building and running the generated code).
 
 ## Installation
@@ -43,14 +42,6 @@ This project is a programming designed to integrate AI into a programming langua
 *  Enter a project name when prompted.
 *  The program will convert the English text in the `.ail` file to Golang code, save it to a `.go` file, and attempt to build it.
 *  If the build is successful, you will be prompted to run the program.
-
-## Commands
-
-*   `make <file.ail>`: Processes a `.ail` file.
-*   `clean`: Removes all generated `.go` and `.exe` files.
-*   `config <key>`: Sets the Hugging Face API key.
-*   `help`: Displays the help menu.
-*   `exit`: Exits the program.
 
 ## License
 
