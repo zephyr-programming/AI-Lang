@@ -16,7 +16,7 @@ This project is a programming language designed to integrate AI into a programmi
 ## Prerequisites
 
 *   Python 3.x (Only if you are using the application via the Python script).
-*   HuggingFace/OpenRouter API key (depending on the provider you use) (obtainable from [here](https://huggingface.co/settings/tokens)).
+*   HuggingFace/OpenRouter API key (depending on the provider you use).
 *   Go (for building and running the generated code).
 
 ## Installation
@@ -45,4 +45,4 @@ This project is a programming language designed to integrate AI into a programmi
 
 ## License
 
-This project is licensed under the Creative Commons Zero v1.0 Universal license. You may view the license [here](https://github.com/zephyr-programming/AI-Lang/blob/main/LICENSE).
+This project is licensed under the MIT license. You may view the license [here](https://github.com/zephyr-programming/AI-Lang/blob/main/LICENSE).
